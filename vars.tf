@@ -9,7 +9,7 @@ resource "aws_vpc" "main" {
 resource "aws_subnet" "public_a" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.1.0/24"
-  availability_zone = "us-east-2a"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "public_a"
@@ -19,7 +19,7 @@ resource "aws_subnet" "public_a" {
 resource "aws_subnet" "public_b" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.2.0/24"
-  availability_zone = "us-east-2b"
+  availability_zone = "us-east-1b"
 
   tags = {
     Name = "public_b"
@@ -29,7 +29,7 @@ resource "aws_subnet" "public_b" {
 resource "aws_subnet" "public_c" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.3.0/24"
-  availability_zone = "us-east-2c"
+  availability_zone = "us-east-1c"
 
   tags = {
     Name = "public_c"
@@ -110,7 +110,7 @@ resource "aws_launch_template" "my_launch_template" {
 
   name = "my_launch_template"
   
-  image_id = "ami-02af4904e34687a9e"
+  image_id = "ami-0fc5d935ebf8bc3bc"
   instance_type = "t2.micro"
   key_name = "mykey"
   
