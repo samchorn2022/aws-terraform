@@ -110,7 +110,7 @@ resource "aws_launch_template" "my_launch_template" {
 
   name = "my_launch_template"
   
-  image_id = "ami-02ec85a32741e2526"
+  image_id = "ami-02af4904e34687a9e"
   instance_type = "t2.micro"
   key_name = "mykey"
   
