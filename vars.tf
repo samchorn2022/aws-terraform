@@ -130,7 +130,7 @@ resource "aws_launch_template" "my_launch_template" {
   
   image_id = "ami-0fc5d935ebf8bc3bc"
   instance_type = "t2.micro"
-  key_name = "mykey"
+  key_name = "aws-keys-login"
   
   user_data = filebase64("${path.module}/server.sh")
 
